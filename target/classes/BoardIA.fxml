@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.* ?>
+
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane id="AnchorPane" minHeight="100" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.insightr.spellmonger.ControllerIA">
+
+    <children>
+
+        <Rectangle styleClass="player-box" fx:id="player1Box" x="10" y="10" width="180" height="170"/>
+        <Rectangle styleClass="player-box" fx:id="player2Box" x="10" y="470" width="180" height="170"/>
+
+        <Text layoutX="720" layoutY="21" id="discard1Name" text="Discard 1"></Text>
+        <Text layoutX="720" layoutY="635" id="discard1Name" text="Discard 2"></Text>
+
+        <ImageView styleClass="discard-box" fx:id="discard1" layoutY="35" layoutX="700" fitHeight="130" fitWidth="110"/>
+        <ImageView styleClass="discard-box" fx:id="discard2" layoutY="480" layoutX="700" fitHeight="130" fitWidth="110"/>
+
+        <Label styleClass="player-name" layoutX="30" layoutY="55" id="player1Name" fx:id="namePlayer1" text="Player 1"></Label>
+        <Label styleClass="player-hp" layoutX="30" layoutY="80" id="hpPlayer1" fx:id="hpPlayer1" text="20"></Label>
+        <Label styleClass="player-energy" layoutX="30" layoutY="105" id="manaPlayer1" fx:id="manaPlayer1" text="1"></Label>
+
+        <Label styleClass="player-name" layoutX="30" layoutY="520" id="player2Name" fx:id="namePlayer2" text="Player 2"/>
+        <Label styleClass="player-hp" layoutX="30" layoutY="545" id="hpPlayer2" fx:id="hpPlayer2" text="20"/>
+        <Label styleClass="player-energy" layoutX="30" layoutY="570" id="manaPlayer2" fx:id="manaPlayer2" text="1"/>
+
+        <Label styleClass="game-msg" layoutX="830" layoutY="470" id="player2Name" fx:id="gameMsg" text="Play !"/>
+        <Button styleClass="pass-button" text="Skip turn" layoutX="825" layoutY="600" onAction="#playNoCard"/>
+
+        <Button styleClass="draw-button" layoutX="580" layoutY="110" mnemonicParsing="false" onAction="#draw" fx:id="draw1Button" text="Draw"/>
+        <HBox fx:id="boardP1"/>
+        <HBox fx:id="boardP2"/>
+
+        <ScrollPane styleClass="board" fx:id="board1" layoutY="183" layoutX="10"/>
+        <GridPane fx:id="boardG1"/>
+        <!--<Label styleClass="game-msg" layoutX="870" layoutY="70" id="progresstext" fx:id="progresstext" text="Timelapse to play turn: "/>
+        <ProgressBar fx:id="TimeToPlay" progress="0" prefWidth="200" layoutX="830" layoutY="85" />-->
+
+        <ScrollPane styleClass="board" fx:id="board2" layoutY="323" layoutX="10"/>
+        <GridPane fx:id="boardG2"/>
+
+        <HBox fx:id="handP1"/>
+        <HBox fx:id="handP2"/>
+
+        <ScrollPane styleClass="hand" fx:id="hand1" layoutY="16" layoutX="210"/>
+        <GridPane fx:id="handG1"/>
+
+        <ScrollPane styleClass="hand" fx:id="hand2" layoutY="474" layoutX="210"/>
+        <GridPane fx:id="handG2"/>
+
+        <ImageView styleClass="currentCard" fx:id="currentCard" layoutY="200" layoutX="830" fitHeight="240" fitWidth="200"/>
+        <Label styleClass="currAttack" layoutX="830" layoutY="440" fx:id="currAttack" text=""></Label>
+        <Label styleClass="currHP" layoutX="970" layoutY="440" fx:id="currHP" text=""></Label>
+
+    </children>
+
+</AnchorPane>

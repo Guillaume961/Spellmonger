@@ -1,0 +1,122 @@
+.root{
+    -fx-background-color: #fcc280;
+}
+
+.card{
+ }
+
+ .currentCard{
+
+ }
+
+ .currHP{
+ -fx-font-weight: bold;
+ -fx-text-fill : green;
+   -fx-font-size: 12pt;
+   -fx-font-family: Consolas;
+ }
+
+ .currAttack{
+ -fx-font-weight: bold;
+ -fx-text-fill : red;
+   -fx-font-size: 12pt;
+   -fx-font-family: Consolas;
+ }
+
+.hand{
+    -fx-pref-width: 360;
+    -fx-pref-height: 163;
+    -fx-background: #fcc280;
+    -fx-border-color: black;
+    -fx-border-width : 2;
+}
+
+.pass-button{
+  -fx-font-size: 14pt;
+  -fx-background-radius: 50em;
+  -fx-min-width: 170px;
+  -fx-max-width: 170px;
+  -fx-min-height: 40px;
+  -fx-background-color: #f25843;
+  -fx-padding: 0px;
+  -fx-text-fill : white;
+}
+
+.draw-button {
+  -fx-font-size: 14pt;
+  -fx-background-radius: 50em;
+  -fx-min-width: 100px;
+  -fx-max-width: 100px;
+  -fx-min-height: 40px;
+  -fx-background-color: #f25843;
+  -fx-padding: 0px;
+
+  -fx-text-fill : white;
+
+      -fx-background-image: url("img/hand-draw.png");
+      -fx-background-size: 24 24;
+      -fx-background-repeat: no-repeat;
+      -fx-background-position:left;
+}
+
+.draw-button:hover, .pass-button:hover{
+-fx-font-weight: bold;
+  -fx-background-color: #d81c1c;
+}
+
+.draw-button:pressed, .draw-button:pressed{
+  -fx-background-color: #d8511c;
+}
+
+.player-box{
+-fx-fill : #fff0af;
+-fx-stroke : #fc9d05;
+-fx-stroke-width: 5;
+-fx-stroke-dash-array: 12 2 4 2;
+-fx-stroke-dash-offset: 6;
+-fx-stroke-line-cap: butt;
+}
+
+.board{
+    -fx-pref-width :800; /*1025*/
+     -fx-pref-height : 140;
+    -fx-background: #f4c292;
+    -fx-border-color: #fc9d05;
+    -fx-border-width : 4;
+}
+
+.discard-box{
+-fx-fill: url("img/card-back.png");
+-fx-stroke : #fc9d05;
+-fx-stroke-width: 5;
+-fx-stroke-line-cap: butt;
+
+ -fx-min-width: 100px;
+ -fx-max-width: 100px;
+ -fx-min-height: 40px;
+}
+
+.player-name {
+-fx-font-weight: bold;
+  -fx-text-fill : #ff8800;
+  -fx-font-size: 19pt;
+  -fx-font-family: Consolas;
+}
+
+.player-hp {
+-fx-font-weight: bold;
+-fx-text-fill : #10ef4f;
+  -fx-font-size: 18pt;
+  -fx-font-family: Consolas;
+}
+
+.player-energy {
+-fx-font-weight: bold;
+-fx-text-fill : #2eade8;
+  -fx-font-size: 17pt;
+  -fx-font-family: Consolas;
+}
+
+.game-msg{
+-fx-text-fill : #844b01;
+}
